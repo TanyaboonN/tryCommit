@@ -44,7 +44,24 @@ public class processbillServlet extends HttpServlet {
 				"	\r\n" + 
 				"	<h3>ใบเสร็จค่าอาหาร</h3>");
 		
-		jack.println("โต๊ะที่ " + gettableNumber + "<br/>" 
+		
+		
+		
+		if(getpriceFood > 500) {
+			double discountpriceDrink = getpriceDrink * 0.5;
+			double finalPriceDiscount = ((getpriceFood + discountpriceDrink + getpriceSweet)*1.10)*1.07;
+			
+			jack.println("โต๊ะที่ " + gettableNumber + "<br/>" 
+					+ "ชื่อลูกค้า " + getcustName + "<br/>"
+					+ "ค่าอาหาร " + getpriceFood + " บาท" + "<br/>" 
+					+ "ค่าเครื่องดื่ม(ลดราคา 50%) " + discountpriceDrink + " บาท" + "<br/>" 
+					+ "ค่าของหวาน " + getpriceSweet + " บาท" + "<br/>" 
+					+ "ภาษี 7%" + "<br/>"
+					+ "ค่าบริการ 10% "  + "<br/>"
+					+ "ค่าใช้จ่ายสุทธิ  " + finalPriceDiscount + " บาท" 
+					 
+					); 
+		}else {jack.println("โต๊ะที่ " + gettableNumber + "<br/>" 
 				+ "ชื่อลูกค้า " + getcustName + "<br/>"
 				+ "ค่าอาหาร " + getpriceFood + " บาท" + "<br/>" 
 				+ "ค่าเครื่องดื่ม " + getpriceDrink + " บาท" + "<br/>" 
@@ -52,7 +69,26 @@ public class processbillServlet extends HttpServlet {
 				+ "ภาษี 7%" + "<br/>"
 				+ "ค่าบริการ 10% "  + "<br/>"
 				+ "ค่าใช้จ่ายสุทธิ  " + finalPrice + " บาท" 
-				); 
+				);
+			
+			
+		}
+		
+		
+		
+		
+		
+//		jack.println("โต๊ะที่ " + gettableNumber + "<br/>" 
+//				+ "ชื่อลูกค้า " + getcustName + "<br/>"
+//				+ "ค่าอาหาร " + getpriceFood + " บาท" + "<br/>" 
+//				+ "ค่าเครื่องดื่ม " + getpriceDrink + " บาท" + "<br/>" 
+//				+ "ค่าของหวาน " + getpriceSweet + " บาท" + "<br/>" 
+//				+ "ภาษี 7%" + "<br/>"
+//				+ "ค่าบริการ 10% "  + "<br/>"
+//				+ "ค่าใช้จ่ายสุทธิ  " + finalPrice + " บาท" 
+//				); 
+//		
+		
 	}
 
 }

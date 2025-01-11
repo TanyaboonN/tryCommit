@@ -1,0 +1,28 @@
+
+
+.productimg {
+	width: 452px;
+	height: 400px;
+}
+
+.socialimg {
+	width: 45px;
+	height: 40px;
+}
+
+.imgalign {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+table {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.txtalign {
+	text-align: center;
+}
+
+
